@@ -1,0 +1,9 @@
+	5. Node.js로 웹 서버 만들기
+		- 웹 브라우저에 주소를 입력해서 요청을하면
+		- 웹 서버는 그 요청에 따른 정보를 찾아서 응답해주는 관계 : Apache
+		
+		- Node.js는 웹 서버로서의 기능도 내장하고 있기 때문에 Apache, Nginx 를 대체하고 더 많은 기능을 제공한다.
+		(https://opentutorials.org/module/3549)
+		
+		
+		
