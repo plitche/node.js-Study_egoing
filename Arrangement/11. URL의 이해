@@ -1,0 +1,9 @@
+	11. URL의 이해
+		* http://opentutorials.org:3000/main?id=HTML&page=12
+			- http: protocol 규칙
+			- opentutorials.org: host(domain)
+			- 3000: port
+			- mian: path
+			- ~~ : query string
+			
+			
