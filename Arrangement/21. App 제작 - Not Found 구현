@@ -1,0 +1,5 @@
+	21. App 제작 - Not Found 구현
+	var ulr = require('url');
+	url.parse(request.url, true).
+		* pathname = query string이 붙지 않은 경로
+		* path = query string이 포함된 경로
