@@ -1,0 +1,9 @@
+	32. Node.js에서 동기와 비동기 1
+		synchronous & asynchronous
+		
+		synchronous
+		- 순차적으로 일을 처리함 (이전의 일이 끝나기 전에 다음 일을 진행하지 않음)
+		asynchronous
+		- 동시에 일을 처리함 (병렬적으로 일을 처리함)
+		
+		Node.js는 비동기적 처리를 하기 위한 좋은 기능을 가지고 있음.
