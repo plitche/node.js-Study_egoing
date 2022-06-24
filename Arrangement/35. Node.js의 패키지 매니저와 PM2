@@ -1,0 +1,14 @@
+	35. Node.js의 패키지 매니저와 PM2
+		* Package Manager : NPM
+		
+		* https://pm2.keymetrics.io/
+			- 어떤 이유에서 우리가 만든 프로세스를 감시하고 있다가 꺼지면 다시 켜주는 역할을 함
+			- 코드를 수정하면 껏다가 다시 실행했어야 했는데, pm2가 수정되는지 관찰하고있다가 수정되면 껏다가 다시 켜준다.
+			
+			- npm install pm2 -g
+			- pm2 start app.js
+				- pm2 start app.js --watch
+			- pm2 monit
+			- pm2 list
+			- pm2 stop app
+			
