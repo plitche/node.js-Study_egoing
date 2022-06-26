@@ -1,0 +1,2 @@
+	39. App 제작 - 파일생성과 리다이렉션
+		* fs.writeFile(file, data[, options], callback)

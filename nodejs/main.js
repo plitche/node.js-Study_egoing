@@ -37,7 +37,7 @@ function templateList(filelist) {
 var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
-    var pathname = url.parse(_url, ture).pathname;
+    var pathname = url.parse(_url, true).pathname;
 
     //console.log(url.parse(_url, true).pathname);
 
@@ -76,7 +76,7 @@ var app = http.createServer(function(request,response){
           <form method="post" action="http://localhost:3000/create_process">
             <p><input type="text" name="title" placeholder="title"></p>
             <p>
-              <textarea name="description" placehoder="description"></textarea>
+              <textarea name="description" placeholder="description"></textarea>
             </p>
             <p>
               <input type="submit">
@@ -92,11 +92,15 @@ var app = http.createServer(function(request,response){
         body = body + data;
       });
       request.on('end', function() {
-          var post = ps.parse(body);
+          var post = qs.parse(body);
           var title = post.title;
           var description = post.description;
-          
+          fs.writeFile(`data/${title}`, description, 'utf-8', function(err) {
+            response.writeHead(302, {location: `/?id=${title}`});
+            response.end();
+          })
       });
+
     } else {
       response.writeHead(404);
       response.end('Not found');
