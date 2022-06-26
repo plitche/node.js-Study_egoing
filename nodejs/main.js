@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url'); // require 요구하다
+var qs = require('querystring');
 // fs, url : 모듈(node.js가 가지고 있는 비슷한 기능들을 모아놓은 것)
 
 function templateHTML(title, list, body) {
@@ -72,7 +73,7 @@ var app = http.createServer(function(request,response){
         var title = 'WEB - create';
         var list = templateList(filelist);
         var template = templateHTML(title, list, `
-          <form method="post" action="http://localhost:3000/process_create">
+          <form method="post" action="http://localhost:3000/create_process">
             <p><input type="text" name="title" placeholder="title"></p>
             <p>
               <textarea name="description" placehoder="description"></textarea>
@@ -85,6 +86,17 @@ var app = http.createServer(function(request,response){
         response.writeHead(200);
         response.end(template);
       })
+    } else if (pathname === '/create_process') {
+      var body = '';
+      request.on('data', function(data) {
+        body = body + data;
+      });
+      request.on('end', function() {
+          var post = ps.parse(body);
+          var title = post.title;
+          var description = post.description;
+          
+      });
     } else {
       response.writeHead(404);
       response.end('Not found');
