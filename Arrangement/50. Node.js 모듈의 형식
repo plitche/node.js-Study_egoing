@@ -1,0 +1,5 @@
+	50. Node.js 모듈의 형식
+		* 모듈이 객체 위의 가장 큰
+		
+		- module.exports = M;
+		- require('M');
