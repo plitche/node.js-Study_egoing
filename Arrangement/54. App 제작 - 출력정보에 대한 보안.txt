@@ -1,0 +1,5 @@
+	54. App 제작 - 출력정보에 대한 보안
+	- npm sanitize html
+	
+	- npm init
+	- npm install -S sanitize-html
